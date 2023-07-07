@@ -1,0 +1,393 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+
+html,
+body {
+	
+	height: 100%;
+}
+
+body {
+
+	background-color:black;
+	overflow: hidden;
+}
+
+.container {
+	
+	height: 100%;
+	perspective: 1000px;
+
+	
+
+	
+}
+
+.subcontainer {
+	
+	height: 100%;
+	position: relative;
+	transform-style: preserve-3d;
+	animation: rotate 30s linear infinite;
+	
+	
+}
+
+
+
+.circle {
+	--blur-value: 0px;
+	--z-position: 0px;
+	--hue: 0;
+	width: 45px;
+	aspect-ratio: 1;
+	border-radius: 100%;
+	position: absolute;
+	background-color: magenta;
+	background-image: radial-gradient(
+		circle at 65% 15%,
+		white 1px,
+		hsl(var(--hue), 70%, 65%) 3%,
+		hsl(var(--hue), 70%, 35%) 60%,
+		hsl(var(--hue), 70%, 65%) 100%
+	);
+	transform: translateZ(var(--z-position)) rotateY(0deg);
+  animation: rotateY 30s linear infinite;
+	filter: blur(var(--blur-value));
+}
+
+@keyframes rotateY {
+	from {
+		transform: translateZ(var(--z-position)) rotateY(0deg);
+	}
+
+	to {
+		transform: translateZ(var(--z-position)) rotateY(-360deg);
+	}
+}
+
+@keyframes rotate {
+	from {
+		transform: rotateY(0deg);
+	}
+	to {
+		transform: rotateY(360deg);
+	}
+}
+
+.div{
+	
+  display:flex;
+ margin-top: 150px;
+
+ flex-direction: row;
+ justify-content: end;
+ width: 1000px;
+ height: 70%;
+
+/* border: 1px solid red; */
+
+}
+.button{
+	
+	display:flex;
+	flex-direction: row;
+justify-content: space-around;
+	height: 50px;
+
+
+
+
+}
+.button .pink{
+	z-index: 1;
+	flex-direction: column;
+	margin-top: -260px;
+    height: 100px;
+	background-color: pink;
+	width: 500px;
+
+}
+.button .red{
+	z-index: 1;
+	flex-direction: column;
+	margin-top: -260px;
+    height: 100px;
+	background-color: red;
+	width: 500px;
+}
+.button .blue{
+	z-index: 1;
+	flex-direction: column;
+	margin-top: -260px;
+    height: 100px;
+	background-color: blue;
+	width: 500px;
+}
+.button .brown{
+	z-index: 1;
+	flex-direction: column;
+	margin-top: -260px;
+    height: 100px;
+	background-color: brown;
+	width: 500px;
+}
+
+.button .black{
+	z-index: 1;
+	flex-direction: column;
+	margin-top: -260px;
+    height: 100px;
+	background-color: black;
+	width: 500px;
+}
+
+
+
+
+
+.button .black {
+	
+  background-color:black;
+  border: 0;
+  border-radius: 56px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: system-ui,-apple-system,system-ui,"Segoe UI",Roboto,Ubuntu,"Helvetica Neue",sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  outline: 0;
+  padding: 16px 21px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: all .3s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button .black:before {
+  background-color: initial;
+  background-image: linear-gradient(#fff 0, rgba(255, 255, 255, 0) 100%);
+  border-radius: 125px;
+  content: "";
+  height: 50%;
+  left: 4%;
+  opacity: .5;
+  position: absolute;
+  top: 0;
+  transition: all .3s;
+  width: 92%;
+}
+
+.button .black:hover {
+  box-shadow: rgba(255, 255, 255, .2) 0 3px 15px inset, rgba(0, 0, 0, .1) 0 3px 5px, rgba(0, 0, 0, .1) 0 10px 13px;
+  transform: scale(1.05);
+}
+
+@media (min-width: 768px) {
+	.button .black {
+    padding: 16px 48px;
+  }
+}
+
+.button .pink {
+	
+	background-color: green;
+	border: 0;
+	border-radius: 56px;
+	color: #fff;
+	cursor: pointer;
+	display: inline-block;
+	font-family: system-ui,-apple-system,system-ui,"Segoe UI",Roboto,Ubuntu,"Helvetica Neue",sans-serif;
+	font-size: 18px;
+	font-weight: 600;
+	outline: 0;
+	padding: 16px 21px;
+	position: relative;
+	text-align: center;
+	text-decoration: none;
+	transition: all .3s;
+	user-select: none;
+	-webkit-user-select: none;
+	touch-action: manipulation;
+  }
+  
+  .button .pink:before {
+	background-color: initial;
+	background-image: linear-gradient(#fff 0, rgba(255, 255, 255, 0) 100%);
+	border-radius: 125px;
+	content: "";
+	height: 50%;
+	left: 4%;
+	opacity: .5;
+	position: absolute;
+	top: 0;
+	transition: all .3s;
+	width: 92%;
+  }
+  
+  .button .pink:hover {
+	box-shadow: rgba(255, 255, 255, .2) 0 3px 15px inset, rgba(0, 0, 0, .1) 0 3px 5px, rgba(0, 0, 0, .1) 0 10px 13px;
+	transform: scale(1.05);
+  }
+  
+  @media (min-width: 768px) {
+	  .button .pink {
+	  padding: 16px 48px;
+	}
+  }
+
+
+
+
+  .button .red {
+	
+	background-color:red;
+	border: 0;
+	border-radius: 56px;
+	color: #fff;
+	cursor: pointer;
+	display: inline-block;
+	font-family: system-ui,-apple-system,system-ui,"Segoe UI",Roboto,Ubuntu,"Helvetica Neue",sans-serif;
+	font-size: 18px;
+	font-weight: 600;
+	outline: 0;
+	padding: 16px 21px;
+	position: relative;
+	text-align: center;
+	text-decoration: none;
+	transition: all .3s;
+	user-select: none;
+	-webkit-user-select: none;
+	touch-action: manipulation;
+  }
+  
+  .button .red:before {
+	background-color: initial;
+	background-image: linear-gradient(#fff 0, rgba(255, 255, 255, 0) 100%);
+	border-radius: 125px;
+	content: "";
+	height: 50%;
+	left: 4%;
+	opacity: .5;
+	position: absolute;
+	top: 0;
+	transition: all .3s;
+	width: 92%;
+  }
+  
+  .button .red:hover {
+	box-shadow: rgba(255, 255, 255, .2) 0 3px 15px inset, rgba(0, 0, 0, .1) 0 3px 5px, rgba(0, 0, 0, .1) 0 10px 13px;
+	transform: scale(1.05);
+  }
+  
+  @media (min-width: 768px) {
+	  .button .red {
+	  padding: 16px 48px;
+	}
+  }
+
+
+
+  .button .blue {
+	
+	background-color:blue;
+	border: 0;
+	border-radius: 56px;
+	color: #fff;
+	cursor: pointer;
+	display: inline-block;
+	font-family: system-ui,-apple-system,system-ui,"Segoe UI",Roboto,Ubuntu,"Helvetica Neue",sans-serif;
+	font-size: 18px;
+	font-weight: 600;
+	outline: 0;
+	padding: 16px 21px;
+	position: relative;
+	text-align: center;
+	text-decoration: none;
+	transition: all .3s;
+	user-select: none;
+	-webkit-user-select: none;
+	touch-action: manipulation;
+  }
+  
+  .button .blue:before {
+	background-color: initial;
+	background-image: linear-gradient(#fff 0, rgba(255, 255, 255, 0) 100%);
+	border-radius: 125px;
+	content: "";
+	height: 50%;
+	left: 4%;
+	opacity: .5;
+	position: absolute;
+	top: 0;
+	transition: all .3s;
+	width: 92%;
+  }
+  
+  .button .blue:hover {
+	box-shadow: rgba(255, 255, 255, .2) 0 3px 15px inset, rgba(0, 0, 0, .1) 0 3px 5px, rgba(0, 0, 0, .1) 0 10px 13px;
+	transform: scale(1.05);
+  }
+  
+  @media (min-width: 768px) {
+	  .button .blue {
+	  padding: 16px 48px;
+	}
+  }
+
+
+
+  .button .brown {
+	
+	background-color:brown;
+	border: 0;
+	border-radius: 56px;
+	color: #fff;
+	cursor: pointer;
+	display: inline-block;
+	font-family: system-ui,-apple-system,system-ui,"Segoe UI",Roboto,Ubuntu,"Helvetica Neue",sans-serif;
+	font-size: 18px;
+	font-weight: 600;
+	outline: 0;
+	padding: 16px 21px;
+	position: relative;
+	text-align: center;
+	text-decoration: none;
+	transition: all .3s;
+	user-select: none;
+	-webkit-user-select: none;
+	touch-action: manipulation;
+  }
+  
+  .button .brown:before {
+	background-color: initial;
+	background-image: linear-gradient(#fff 0, rgba(255, 255, 255, 0) 100%);
+	border-radius: 125px;
+	content: "";
+	height: 50%;
+	left: 4%;
+	opacity: .5;
+	position: absolute;
+	top: 0;
+	transition: all .3s;
+	width: 92%;
+  }
+  
+  .button .brown:hover {
+	box-shadow: rgba(255, 255, 255, .2) 0 3px 15px inset, rgba(0, 0, 0, .1) 0 3px 5px, rgba(0, 0, 0, .1) 0 10px 13px;
+	transform: scale(1.05);
+  }
+  
+  @media (min-width: 768px) {
+	  .button .brown{
+	  padding: 16px 48px;
+	}
+  }
